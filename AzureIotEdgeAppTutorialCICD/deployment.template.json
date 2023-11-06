@@ -3,7 +3,7 @@
   "modulesContent": {
     "$edgeAgent": {
       "properties.desired": {
-        "schemaVersion": "1.0",
+        "schemaVersion": "1.1",
         "runtime": {
           "type": "docker",
           "settings": {
@@ -11,9 +11,9 @@
             "loggingOptions": "",
             "registryCredentials": {
               "acr": {
-                "username": "${ACR_USER}",
-                "password": "${ACR_PASSWORD}",
-                "address": "${ACR_ADDRESS}"
+                "username": "$bp0292containerregistry",
+                "password": "$Zcdy4OdZx5cgcCeIATeLy0+mBw8h/Kb/vFbF7aIdCm+ACRCDi25n",
+                "address": "$bp0292containerregistry.azurecr.io"
               }
             }
           }
@@ -82,7 +82,7 @@
     },
     "$edgeHub": {
       "properties.desired": {
-        "schemaVersion": "1.0",
+        "schemaVersion": "1.2",
         "routes": {
           "IotEdgeModuleTutorialCICDToIoTHub": "FROM /messages/modules/IotEdgeModuleTutorialCICD/outputs/* INTO $upstream",
           "sensorToIotEdgeModuleTutorialCICD": "FROM /messages/modules/SimulatedTemperatureSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/IotEdgeModuleTutorialCICD/inputs/input1\")"
