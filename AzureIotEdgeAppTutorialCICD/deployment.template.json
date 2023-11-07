@@ -12,7 +12,7 @@
             "registryCredentials": {
               "acr": {
                 "username": "${ACR_USER}",
-                "password": "${ACC_PASSWORD}",
+                "password": "${ACR_PASSWORD}",
                 "address": "${ACR_ADDRESS}"
               }
             }
