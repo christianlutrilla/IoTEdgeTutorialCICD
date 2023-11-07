@@ -2,7 +2,7 @@
     "$schema-version": "0.0.1",
     "description": "",
   "image": {
-    "repository": "$bp0292containerregistry.azurecr.io/iotedgemoduletutorialcicd",
+    "repository": "${ACR_ADDRESS}/iotedgemoduletutorialcicd",
     "tag": {
       "version": "0.0.1",
       "platforms": {
